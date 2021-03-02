@@ -1,6 +1,20 @@
 # wsl2
 > Windows Subsystem Linux Kali
 
+## Overview
+
+> Win-KeX provides a Kali Desktop Experience for Windows Subsystem for Linux (WSL 2) with the following features:
+- Window mode: start a Kali Linux desktop in a dedicated window
+- Seamless mode: share the Windows desktop between Windows and Kali apps and menus
+- Sound support
+- Unprivileged and Root session support
+- Shared clipboard for cut and paste support between Kali Linux and Windows apps
+- Multi-session support: root window & non-priv window & seamless sessions concurrently
+
+![img0.png](https://www.kali.org/docs/wsl/win-kex/win-kex-sl.png)
+
+> This page details the steps to install Win-Kex in under 2 minutes.
+
 ## Installation
 All installation steps, up to the point where we install Win-Kex, are also explained in the 5 minute video guide by the amazing NetworkChuck:
 Kali Linux on Windows in 5min (WSL2 GUI)
@@ -153,3 +167,30 @@ man kex
 ![img9.png](https://www.kali.org/docs/wsl/win-kex/manpage.png)
 
 or join us in the Kali Forums
+
+## PROBLEMS
+## unable to contact settings server
+> Shutdown Win-KeX and vnc-server:
+```
+vncserver --kill :*
+kex kill
+kex stop
+```
+> Install dbus-x11:
+```
+sudo apt update
+sudo apt-get install dbus-x11
+```
+> Restart Win-Kex:
+```
+kex -s
+```
+> Or install dbus-x11 manually
+(package "dbus-x11" has no installation candidate.)
+
+https://packages.debian.org/sid/dbus-x11
+https://packages.debian.org/sid/amd64/dbus-x11/download
+```
+sudo dpkg --install dbus-x11*.deb
+sudo apt install --assume-yes --fix-broken
+```
