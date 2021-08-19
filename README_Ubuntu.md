@@ -20,6 +20,8 @@ wsl --set-default-version 2
 ```
 
 ## Download Linux
+Download Ubunt Linux in WSL Store
+
 > https://aka.ms/wslstore
 
 ## Ubuntu GUI commands:
