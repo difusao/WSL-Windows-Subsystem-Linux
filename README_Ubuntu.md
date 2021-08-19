@@ -1,5 +1,22 @@
 # wsl2
+
 > Windows Subsystem Linux
+
+## Prerequisites
+- Running Windows 10 version 2004 or higher
+- Using Windows Terminal
+
+## Install Kali Linux in WSL2
+- Open PowerShell as administrator and run:
+
+`Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+
+- Restart
+- Open PowerShell as administrator and run:
+```
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
 
 ## WSL commands:
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
