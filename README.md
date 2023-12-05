@@ -7,3 +7,5 @@ Configuração do WSL para serem usados no Windows 10.
 
 > Ubuntu
 - [README_Ubuntu.md](README_Ubuntu.md)
+
+![img0.png](https://www.kali.org/docs/wsl/win-kex/win-kex-sl.png)
